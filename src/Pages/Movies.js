@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Section, Pages } from "../styles/Pages"
+import { Section, PageTitle, Pages } from "../styles/Pages"
 import {Img, Rank, Title, Date, Overview, Score, Vote} from "../components/Infos"
 
 const MovieAPI = axios.create({
@@ -54,6 +54,9 @@ export default class Movie extends React.Component {
     return (
       <>
         <main>
+          <PageTitle>
+            <h2>Movies</h2>
+          </PageTitle>
           <Section>
             {/* {this.state.moviesFilter.map((item) => ( */}
             {this.state.movies.map((item) => (

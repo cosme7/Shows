@@ -30,7 +30,7 @@ export default class Header extends Component{
             </ul>
           </nav>  
           <div>
-            <input type="text" placeholder="Pesquisar" />
+            <input type="text" placeholder="Search" />
             <button>
               <img src={search} alt="search" />
             </button>

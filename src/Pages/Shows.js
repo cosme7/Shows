@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Section, Pages } from "../styles/Pages"
+import { Section, PageTitle, Pages } from "../styles/Pages"
 import {Img, Rank, Title, Date, Overview, Score, Vote} from "../components/Infos"
 
 const SeriesAPI = axios.create({
@@ -54,6 +54,9 @@ export default class Shows extends React.Component {
     return (
       <>
         <main>
+        <PageTitle>
+            <h2>Shows</h2>
+          </PageTitle>
           <Section>
             {/* {this.state.listShows.map((item) => ( */}
             {this.state.series.map((item) => (

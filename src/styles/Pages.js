@@ -11,9 +11,29 @@ export const Section = styled.section`
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: 95%;
-        gap: 1.5rem;
+        column-gap: 1.5rem;
         overflow-x: auto;
         overscroll-behavior-inline: contain;
+    }
+`;
+
+export const PageTitle = styled.div`
+    width: 20%;
+    margin: 0 auto;
+    border-left: 5px solid #d52834;
+    border-bottom: 15px solid #d52834;
+
+
+    h2{
+        font-size: clamp(2rem, 4vw, 5rem);
+        font-family:var(--ff-title);
+        color: var(--clr-secondary);
+        text-align: center;
+    }
+
+    @media screen and (max-width:720px){
+        width: 50%;
+        border-bottom: 10px solid #d52834;
     }
 `;
 
@@ -46,6 +66,7 @@ export const Pages = styled.div`
 
     @media screen and (max-width:720px){
         margin: 2rem auto;
+        grid-row-start: 2;
         flex-direction: column;
         align-items: center;
         box-shadow: none;

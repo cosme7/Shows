@@ -13,7 +13,7 @@ export default class Rotas extends Component{
         <Router>
             <Header />
             <Routes>
-                <Route path='Shows_List/' element={<Home />} />
+                <Route path='/' element={<Home />} />
                 <Route path='/movies' element={<Movies />} />
                 <Route path='/shows' element={<Shows />} />
                 <Route path= '*' element={<Error />} />

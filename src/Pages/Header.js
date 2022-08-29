@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { HeaderPage, InputMenu, LinkStyle} from "../styles/HeaderStyle"
+import { HeaderPage, InputMenu} from "../styles/HeaderStyle"
 import search from "../components/Assets/search_01.svg";
 import { Link } from "react-router-dom";
 
@@ -24,9 +24,9 @@ export default class Header extends Component{
               <span></span>
             </label>
             <ul>
-              <LinkStyle to='/'><li>{this.state.begin}</li></LinkStyle>
-              <LinkStyle to='/Movies'><li>{this.state.movies}</li></LinkStyle>  
-              <LinkStyle to='/Shows'><li>{this.state.shows}</li></LinkStyle>  
+              <Link to='/'><li>{this.state.begin}</li></Link>
+              <Link to='/Movies'><li>{this.state.movies}</li></Link>  
+              <Link to='/Shows'><li>{this.state.shows}</li></Link>  
             </ul>
           </nav>  
           <div>

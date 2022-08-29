@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const HeaderPage = styled.section`
   width: 100%;
@@ -156,6 +155,17 @@ export const HeaderPage = styled.section`
       color: var(--clr-secondary);
     }
 
+    ul a{
+    width: 100%;
+    border-radius: 50px;
+    padding: 0.2rem 0.3rem 0.2rem 0;
+    text-align: right;
+    }
+
+    ul a:hover{
+      background: var(--bg-input);
+    }
+
     span,
     span::before,
     span::after{
@@ -170,18 +180,5 @@ export const InputMenu = styled.input`
   :checked ~ ul{
     transform: scale(1,1);
     transition: opacity 250ms ease-in-out 250ms;
-  }
-`;
-
-export const LinkStyle = styled(Link)`
-  @media screen and (max-width:720px){
-    width: 100%;
-    border-radius: 50px;
-    padding: 0.2rem 0;
-    text-align: right;
-
-    :hover{
-      background: var(--bg-input);
-    }
   }
 `;

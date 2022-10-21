@@ -62,6 +62,7 @@ export const Pages = styled.div`
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: .2fr .2fr 2fr .2fr;
         row-gap: 0.5rem;
+        overflow-y: auto;
     }
 
     @media screen and (max-width:720px){
@@ -76,14 +77,15 @@ export const Pages = styled.div`
             width: 100%;
             height: 100%;
             padding: 0 0.5rem;
+            transform: translateY(93%);
+            transition: transform 0.2s ease-in-out;
             position: absolute;
             z-index: 1;
-            top: 93%
         }
 
         img:hover ~ div,
-        img:focus ~ div{
-            top: 0;
+        img:focus-within ~ div{
+            transform: translateY(0);
         }
 
         div::after{
